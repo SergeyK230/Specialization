@@ -6,6 +6,14 @@
     }
 }
 
+void PrintArray(string[] array)
+{
+    for (int i = 0; i < array.Length; i++)
+    {
+        System.Console.WriteLine(array[i]);
+    }
+}
+
 int FindCountSample(string[] array)
 {
     int countSample = 0;
@@ -40,3 +48,4 @@ string[] array1 = new string[count];
 FillArray(array1);
 
 string[] array2 = ArraySample(array1);
+PrintArray(array2);
