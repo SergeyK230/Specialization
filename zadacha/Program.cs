@@ -28,14 +28,15 @@ string[] ArraySample(string[] array1)
 {
     
     string[] array2 = new string[FindCountSample(array1)];
+    int j = 0;
     for (int i = 0; i < array2.Length; i++)
     {
-        int j = 0;
         for (; j < array1.Length; j++)
         {
             if (array1[j].Length <= 3)
             {
                 array2[i] = array1[j];
+                j++;
                 break;
             }
         }
@@ -46,6 +47,7 @@ string[] ArraySample(string[] array1)
 int count = int.Parse(Console.ReadLine());
 string[] array1 = new string[count];
 FillArray(array1);
+System.Console.WriteLine();
 
 string[] array2 = ArraySample(array1);
 PrintArray(array2);
