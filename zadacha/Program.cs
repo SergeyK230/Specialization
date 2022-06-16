@@ -1,5 +1,6 @@
 ﻿void FillArray(string[] array)
 {
+    System.Console.WriteLine("Введите элементы массива через ентер");
     for (int i = 0; i < array.Length; i++)
     {
         array[i] = Console.ReadLine();
@@ -10,7 +11,7 @@ void PrintArray(string[] array)
 {
     for (int i = 0; i < array.Length; i++)
     {
-        System.Console.WriteLine(array[i]);
+        System.Console.Write($"{array[i]} ");
     }
 }
 
@@ -44,6 +45,7 @@ string[] ArraySample(string[] array1)
     return(array2);
 }
 
+System.Console.WriteLine("Введите размер массива");
 int count = int.Parse(Console.ReadLine());
 string[] array1 = new string[count];
 FillArray(array1);
